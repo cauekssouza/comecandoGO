@@ -1,0 +1,165 @@
+	// Variables
+	//var x int = 10
+	//fmt.Println(x)
+
+	// Constants
+	//const y string = "Hello, Go!"
+	//fmt.Println(y)
+
+	// arrays
+	//var a [5]int = [5]int{1,2,3,4,5}
+	//fmt.Println(a)
+
+	// slices
+	//b := []int{1,2,3,4,5}
+	//fmt.Println(b)
+
+	// if-else
+	//num := 10
+	//if num%2 == 0 {
+	//	fmt.Println(num, "is even")
+	//} else {
+	//	fmt.Println(num, "is odd")
+	//}
+
+    /*fmt.Println("Operador de Matemáticas")
+	fmt.Println("10 + 5 =", 10+5)
+	fmt.Println("10 - 5 =", 10-5)
+	fmt.Println("10 * 5 =", 10*5)
+	fmt.Println("10 / 5 =", 10/5)
+	fmt.Println("10 % 5 =", 10%5)
+
+	var base, expoente float64
+	base = 2
+	expoente = 3
+	fmt.Println("2 ^ 3 =", math.Pow(base, expoente))
+
+	num := 10
+	num++
+	fmt.Println("10+1=", num)
+
+	num2 := 10
+	num2--
+	fmt.Println("10-1=",num2)
+
+	fmt.Println("Operador Assigment")
+	meunum := 10
+	meunum += 5
+	fmt.Println("10+5=", meunum)
+
+	fmt.Println("Operador de Comparação")
+	fmt.Println("5==5", 5==5)
+	fmt.Println("5!=6", 5!=6)
+	fmt.Println("5>6", 5>6)
+	fmt.Println("5<6", 5<6)
+	fmt.Println("5==5", 5==5)
+	fmt.Println("5>=6", 5>=6)
+	fmt.Println("5<=6", 5<=6) */
+
+	// // Logica
+	var Nome string = "Caue"
+
+	if Nome == "Caue"{
+		fmt.Println("Ola", Nome)
+	} else {
+		fmt.Println("Voce não é o", Nome)
+	}
+// for loops
+	for i:=0; i < 5; i++{
+		fmt.Println(i)
+	}
+
+	// Função
+	func minhaFuncao(){
+		fmt.Println("Minha Função")
+	}
+
+	// Maps
+	var pizza = map[string]string{
+		"Calabresa": "Tim"}
+
+		fmt.Println(pizza)
+		fmt.Println(pizza["Calabresa"])
+// Struct
+// 1. Definição da Struct
+type Retangulo struct {
+    Largura float64
+    Altura  float64
+}
+
+// 2. Definição de um Método para a Struct
+// Este método calcula a área do retângulo
+func (r Retangulo) Area() float64 {
+    return r.Largura * r.Altura
+}
+
+// Este método calcula o perímetro
+func (r Retangulo) Perimetro() float64 {
+    return 2*r.Largura + 2*r.Altura
+}
+
+func main() {
+    // 3. Criação (instanciação) de uma variável do tipo Retangulo
+    r1 := Retangulo{Largura: 10, Altura: 5}
+
+    // 4. Acessando os campos
+    fmt.Printf("Retângulo com Largura: %.2f e Altura: %.2f\n", r1.Largura, r1.Altura)
+
+    // 5. Chamando os métodos da struct
+    fmt.Printf("Área: %.2f\n", r1.Area())
+    fmt.Printf("Perímetro: %.2f\n", r1.Perimetro())
+}
+
+var num string = "Caue"
+
+	minhaInt, err := strconv.Atoi(num)
+	if err == nil{
+		fmt.Println(minhaInt + 4)
+	} else {
+		fmt.Println("erro", err)
+	}
+
+	package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func main() {
+	var meuNum int = 21
+	meuNum2 := strconv.Itoa(meuNum)
+	fmt.Println(meuNum2 + strconv.Itoa(9))
+
+	var meuNum3 int = 100
+	meuNum4 := fmt.Sprintf("%v",meuNum3)
+	fmt.Println(meuNum4 + "Cauê")
+}
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	// String Manipulação
+	var nome string = "caue souza"
+	fmt.Println(nome)
+	// Upper
+	fmt.Println("Grande:",strings.ToUpper(nome))
+	// Lower
+	fmt.Println("Pequeno:",strings.ToLower(nome))
+
+	// titlecase
+	fmt.Println("Titulo:", strings.Title(nome))
+
+	// trim
+	fmt.Println("Trim:", nome, "Algo")
+	fmt.Println("")
+	fmt.Println("Trim:", strings.TrimRight(nome, ""), "Algo")
+	fmt.Println("")
+	fmt.Println("Trim:", strings.TrimLeft(nome, ""), "Algo")
+
+
+}
